@@ -3,13 +3,19 @@ import './App.css';
 
 function App() {
 
+  const handlePayRoute = () => {
+    window.location = "upi://pay?pa=bhaskar03112000@okhdfcbank&amp;pn=Aditi Singh K&am=1&amp;cu=INR";
+  }
+
   return (
     <div className="App">
-      {/* <button> */}
-        <a href={"upi://pay?pa=as946963@okicici&amp;pn=Aditi Singh K&amp;cu=INR"}> Pay Now!</a>
-      {/* </button> */}
+      <button onClick={() => handlePayRoute()}>
+        Pay Now!
+      </button>
     </div>
   );
 }
+
+// upi://pay?pa=bhaskar03112000@okhdfcbank&amp;pn=Aditi Singh K&amp;cu=INR
 
 export default App;
