@@ -12,7 +12,7 @@ function App() {
     currency: 'INR',
   })
 
-  const [Qrvalue, setQrvalue] = React.useState('upi://pay?pa=9262561881@ybl&amp;pn=JOHN BRITAS AK &amp;cu=1');
+  const [Qrvalue, setQrvalue] = React.useState('upi://pay?pa=9262561881@ybl&pn=Akshat Bhaskar&am=1&tn=442389749fhefh&cu=INR');
 
   const handlePayRoute = (UPI_APP_NAME) => {
     let paymentURL = '';
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={() => handlePayRoute('GOOGLE')}>
+      {/* <button onClick={() => handlePayRoute('GOOGLE')}>
         Google Pay
       </button>
       <button onClick={() => handlePayRoute('PHONE_PAY')}>
@@ -39,8 +39,8 @@ function App() {
       </button>
       <button onClick={() => handlePayRoute('PAYTM')}>
         Paytm
-      </button>
-      {/* <QRCode value={Qrvalue} size={256} /> */}
+      </button> */}
+      <QRCode value={Qrvalue} size={256} />
     </div>
   );
 }
