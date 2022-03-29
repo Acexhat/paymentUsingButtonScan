@@ -18,6 +18,7 @@ export default function PaymentMob() {
             case 'PHONE_PAY': paymentURL = `phonepe://pay?pa=${paymentDetails.upiId}&pn=${paymentDetails.name}&am=1&cu=INR`; break;
             case 'PAYTM': paymentURL = `paytmmp://pay?pa=${paymentDetails.upiId}&pn=${paymentDetails.name}&am=1&cu=INR`; break;
             case 'ANY': paymentURL = `upi://pay?pa=9262561881@ybl&pn=Akshat Bhaskar&am=1&tn=442389749fhefh&cu=INR`; break;
+            // upi://pay?pa=bhaskar03112000@okhdfcbank&amp;pn=Akshat&amp;cu=INR
             default: break;
         }
         // paymentURL = paymentURL + `pay?pa=${paymentDetails.upiId}&pn=${paymentDetails.name}&mc=0001&tr=${random_trxn_no}&am=${paymentDetails.amount}&cu=${paymentDetails.currency}`;
@@ -30,12 +31,12 @@ export default function PaymentMob() {
                     Google Pay
                 </button>
                 <button className="btn" onClick={() => handlePayRoute('PHONE_PAY')}>
-                    Phone Pay
+                    PhonePe
                 </button>
                 <button className="btn" onClick={() => handlePayRoute('PAYTM')}>
                     Paytm
                 </button>
-                <button className="btn" onClick={() => handlePayRoute('Any')}>
+                <button className="btn" onClick={() => handlePayRoute('ANY')}>
                     Any
                 </button>
         </div>
