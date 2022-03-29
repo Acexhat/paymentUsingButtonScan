@@ -16,14 +16,14 @@ function App() {
 
   const handlePayRoute = (UPI_APP_NAME) => {
     let paymentURL = '';
+    let random_trxn_no = (Math.random() + 1).toString(36).substring(2);
     switch (UPI_APP_NAME) {
-      case 'GOOGLE': paymentURL = 'tez://upi/'; break;
-      case 'PHONE_PAY': paymentURL = 'phonepe://'; break;
-      case 'PAYTM': paymentURL = 'paytmmp://'; break;
+      case 'GOOGLE': paymentURL = `tez://upi/pay?pa=${paymentDetails.upiId}&pn=${paymentDetails.name}&mc=0001&tr=${random_trxn_no}&am=${paymentDetails.amount}&cu=${paymentDetails.currency}`; break;
+      case 'PHONE_PAY': paymentURL = `phonepe://pay?pa=${paymentDetails.upiId}&pn=${paymentDetails.name}&am=1&cu=INR`; break;
+      case 'PAYTM': paymentURL = `paytmmp://pay?pa=${paymentDetails.upiId}&pn=${paymentDetails.name}&am=1&cu=INR`; break;
       default: break;
     }
-    let random_trxn_no = (Math.random() + 1).toString(36).substring(2);
-    paymentURL = paymentURL + `pay?pa=${paymentDetails.upiId}&pn=${paymentDetails.name}&mc=0001&tr=${random_trxn_no}&am=${paymentDetails.amount}&cu=${paymentDetails.currency}`;
+    // paymentURL = paymentURL + `pay?pa=${paymentDetails.upiId}&pn=${paymentDetails.name}&mc=0001&tr=${random_trxn_no}&am=${paymentDetails.amount}&cu=${paymentDetails.currency}`;
     window.location.href = paymentURL;
   }
 
