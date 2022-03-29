@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <button onClick={() => handlePayRoute('GOOGLE')}>
+      <button onClick={() => handlePayRoute('GOOGLE')}>
         Google Pay
       </button>
       <button onClick={() => handlePayRoute('PHONE_PAY')}>
@@ -39,8 +39,8 @@ function App() {
       </button>
       <button onClick={() => handlePayRoute('PAYTM')}>
         Paytm
-      </button> */}
-      <QRCode value={Qrvalue} size={256} />
+      </button>
+      {/* <QRCode value={Qrvalue} size={256} /> */}
     </div>
   );
 }
