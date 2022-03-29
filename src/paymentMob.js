@@ -11,7 +11,7 @@ export default function PaymentMob() {
     })
 
     const handlePhonepe = () => {
-        window.location.href = " upi://pay?pa=bhaskar03112000@okhdfcbankx&pn=AkshatBhaskar&am=1.00&mam=2.00&tid=YBLc6f12c2333b2495fbfd024b12ad43dc7&tr=T2002061921587731419308&tn=Payment%20for%20TX117785240954814000&mc=5311&mode=04&purpose=00"
+        
     }
 
     const handlePayRoute = (UPI_APP_NAME) => {
@@ -19,7 +19,7 @@ export default function PaymentMob() {
         let random_trxn_no = (Math.random() + 1).toString(36).substring(2);
         switch (UPI_APP_NAME) {
             case 'GOOGLE': paymentURL = `tez://upi/pay?pa=${paymentDetails.upiId}&pn=${paymentDetails.name}&mc=&tr=${random_trxn_no}&am=${paymentDetails.amount}&cu=${paymentDetails.currency}`; break;
-            // case 'PHONE_PAY': paymentURL = `phonepe://pay?pa=${paymentDetails.upiId}&pn=${paymentDetails.name}&am=1&cu=INR`; break;
+            case 'PHONE_PAY': paymentURL = `phonepe://pay?pa=${paymentDetails.upiId}&pn=${paymentDetails.name}&am=1&cu=INR`; break;
             case 'PAYTM': paymentURL = `paytmmp://pay?pa=${paymentDetails.upiId}&pn=${paymentDetails.name}&am=1&cu=INR`; break;
             case 'ANY': paymentURL = `upi://pay?pa=9262561881@ybl&pn=Akshat Bhaskar&am=1&tn=442389749fhefh&cu=INR`; break;
             // upi://pay?pa=bhaskar03112000@okhdfcbank&amp;pn=Akshat&amp;cu=INR
