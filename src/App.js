@@ -8,7 +8,7 @@ function App() {
   const [paymentDetails, setPaymentDetails] = React.useState({
     name: 'Akshat Bhaskar',
     upiId: '9262561881@ybl',
-    amount: '1',
+    amount: 1,
     currency: 'INR',
   })
 
@@ -26,8 +26,6 @@ function App() {
     paymentURL = paymentURL + `pay?pa=${paymentDetails.upiId}&pn=${paymentDetails.name}&mc=0001&tr=${random_trxn_no}&am=${paymentDetails.amount}&cu=${paymentDetails.currency}`;
     window.location.href = paymentURL;
   }
-
-
 
   return (
     <div className="App">
