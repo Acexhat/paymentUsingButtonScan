@@ -19,7 +19,8 @@ function App() {
       case 'PAYTM': paymentURL = 'paytmmp://'; break;
       default: break;
     }
-    paymentURL = paymentURL + `pay?pa=${paymentDetails.upiId}&pn=${paymentDetails.name}&tn=HelloWorld&am=${paymentDetails.amount}&cu=${paymentDetails.currency}`;
+    let random_trxn_no = (Math.random() + 1).toString(36).substring(2);
+    paymentURL = paymentURL + `pay?pa=${paymentDetails.upiId}&pn=${paymentDetails.name}&mc=0000&tr=${random_trxn_no}&tn=HelloWorld&am=${paymentDetails.amount}&cu=${paymentDetails.currency}`;
     window.location.href = paymentURL;
   }
 
