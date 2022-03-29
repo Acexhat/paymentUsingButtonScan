@@ -15,9 +15,9 @@ function App() {
     let paymentURL = '';
     switch (UPI_APP_NAME) {
       case 'GOOGLE': paymentURL = 'tez://upi/'; break;
-      case 'PHONE_PAY': paymentURL = 'tez://upi/'; break;
-      case 'PAYTM': paymentURL = 'tez://upi/'; break;
-      default: paymentURL = 'upi/'; break;
+      case 'PHONE_PAY': paymentURL = 'phonepe://'; break;
+      case 'PAYTM': paymentURL = 'paytmmp://'; break;
+      default: break;
     }
     paymentURL = paymentURL + `pay?pa=${paymentDetails.upiId}&pn=${paymentDetails.name}&tn=HelloWorld&am=${paymentDetails.amount}&cu=${paymentDetails.currency}`;
     window.location.href = paymentURL;
