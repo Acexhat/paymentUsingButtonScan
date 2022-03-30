@@ -34,7 +34,7 @@ export default function PaymentMob() {
                 <button className="btn" onClick={() => handlePayRoute('GOOGLE')}>
                     Google Pay
                 </button>
-                <button className="btn" onClick={() => handlePhonepe()}>
+                <button className="btn" onClick={() => handlePhonepe('PHONE_PAY')}>
                     PhonePe
                 </button>
                 <button className="btn" onClick={() => handlePayRoute('PAYTM')}>
